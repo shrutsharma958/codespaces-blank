@@ -9,15 +9,15 @@ app = Flask(__name__)
 @app.route('/htop')
 def htop():
     try:
-        # Fetching system details
-        username = getpass.getuser()  # Safer way to get the username
-        name = "Your Full Name"  # Replace with your actual name
+       
+        username = getpass.getuser() 
+        name = "Your Full Name"  
         server_time = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S IST")
         
-        # Running the 'ps aux' command to get system resource usage
+       
         ps_output = subprocess.check_output("ps aux", shell=True).decode("utf-8")
         
-        # Formatting the result
+       
         return f"""
             <html>
                 <head><title>Server Info</title></head>
