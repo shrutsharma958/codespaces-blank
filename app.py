@@ -11,7 +11,7 @@ def htop():
     try:
        
         username = getpass.getuser() 
-        name = "Your Full Name"  
+        name = "Shrut sharma"  
         server_time = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S IST")
         
        
